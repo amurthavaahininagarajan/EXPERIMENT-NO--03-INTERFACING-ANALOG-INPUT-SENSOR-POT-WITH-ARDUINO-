@@ -67,8 +67,31 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+ ```
+int potPin= A5;
+int ledPin= 2;
 
+void setup()
+{
+ pinMode(potPin, INPUT);
+ pinMode (ledPin, OUTPUT);
+ Serial.begin(9600);
+ 
+}
+
+void loop()
+{
+ int PotMeasure = analogRead(A5);
+ Serial.print("Sensor Value: ");
+ Serial.println(PotMeasure);
+ if (PotMeasure>=650)
+ {
+   digitalWrite(2, HIGH);
+ }
+ else
+   digitalWrite(2, LOW);
+}
+```
 
 
 
@@ -81,13 +104,19 @@ CIRCUIT DIAGRAM
 **Simulation output:** 
 **
 
-
-[My image](username.github.com/repository/img/image.jpg)
-
-
+### BEFORE STIMULAIION
+![Screenshot (63)](https://github.com/amurthavaahininagarajan/EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/118679102/f1d9b356-6a76-4fdc-9c1d-9d40b488b4cc)
 
 
+### AFTER STIMULATION
+
+![Screenshot (62)](https://github.com/amurthavaahininagarajan/EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/118679102/0fc214af-ccf7-462b-816c-e11d03a9dd30)
 
 
 
-**RESULT: ** Arduino uno analog input functioning is learned and interfaced with digital input switch .
+
+
+
+
+**RESULT: **
+Arduino uno analog input functioning is learned and interfaced with digital input switch .
